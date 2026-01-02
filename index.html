@@ -1,134 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip Digital | PPC Systems & Operational Freedom</title>
     <style>
+        /* [Existing Styles] */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; background: #ffffff; }
         .wrapper { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
         h1, h2, h3, h4 { font-weight: 700; color: #000; letter-spacing: -0.02em; line-height: 1.1; }
-        
         header { padding: 30px 0; }
         .header-nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 800; color: #000; text-decoration: none; font-size: 1.2rem; }
-        .contact-link { 
-            color: #000; text-decoration: none; font-weight: 600;
-            border: 2px solid #000; padding: 10px 22px; border-radius: 6px; transition: 0.2s;
-        }
+        
+        /* Language Switcher Style */
+        .nav-right { display: flex; align-items: center; gap: 25px; }
+        .lang-switch { text-decoration: none; color: #666; font-size: 0.9rem; font-weight: 600; transition: 0.2s; }
+        .lang-switch:hover { color: #000; }
+        
+        .contact-link { color: #000; text-decoration: none; font-weight: 600; border: 2px solid #000; padding: 10px 22px; border-radius: 6px; transition: 0.2s; }
         .contact-link:hover { background: #000; color: white; }
-
-        /* HERO SECTION */
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr; 
-            gap: 60px;
-            padding: 60px 0 80px;
-            align-items: start;
-        }
-
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; padding: 60px 0 80px; align-items: start; }
         .bio-area h1 { font-size: 3.8rem; margin-bottom: 20px; }
         .bio-area p { font-size: 1.2rem; margin-bottom: 30px; color: #333; max-width: 620px; }
-
-        /* TAGS */
         .value-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-        .tag {
-            background: #f4f4f4;
-            color: #000;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid #e0e0e0;
-        }
+        .tag { background: #f4f4f4; color: #000; padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; border: 1px solid #e0e0e0; }
         .tag-blue { background: #e8f2ff; border-color: #c2d9ff; color: #0056b3; }
-
-        /* TOOLBOX */
         .tool-area { background: #fafafa; padding: 35px; border-radius: 12px; border: 1px solid #eaeaea; }
         .tool-area h3 { font-size: 0.8rem; text-transform: uppercase; color: #999; margin-bottom: 20px; letter-spacing: 0.1em; }
-
         .platform-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 25px; }
-        .brand-badge {
-            display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 6px; 
-            font-weight: 700; font-size: 0.85rem; color: #fff; text-decoration: none;
-        }
-        .google { background: #4285F4; }
-        .fb { background: #1877F2; }
-        .ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-        .li { background: #0077B5; }
-
+        .brand-badge { display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; color: #fff; text-decoration: none; }
+        .google { background: #4285F4; } .fb { background: #1877F2; } .ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); } .li { background: #0077B5; }
         .mastery-list { list-style: none; border-top: 1px solid #eee; padding-top: 20px; }
         .mastery-list li { font-size: 0.9rem; margin-bottom: 8px; display: flex; justify-content: space-between; color: #555; }
         .mastery-list li span { font-weight: 700; color: #000; text-align: right; }
-
-        /* PARTNERSHIP MODELS */
         .services-section { background: #fcfcfc; border-top: 1px solid #eee; padding: 80px 0; }
         .card-grid { display: flex; gap: 40px; align-items: stretch; }
-        .service-card { 
-            flex: 1; 
-            background: #fff; 
-            padding: 45px; 
-            border: 1px solid #e0e0e0; 
-            border-radius: 12px; 
-            display: flex; 
-            flex-direction: column;
-            transition: 0.3s; 
-        }
+        .service-card { flex: 1; background: #fff; padding: 45px; border: 1px solid #e0e0e0; border-radius: 12px; display: flex; flex-direction: column; transition: 0.3s; }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
         .service-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
         .service-card p { flex-grow: 1; margin-bottom: 20px; }
         .service-card ul { list-style: none; margin-bottom: 30px; }
         .service-card li { margin-bottom: 10px; padding-left: 20px; position: relative; font-size: 0.95rem; }
         .service-card li::before { content: "→"; position: absolute; left: 0; font-weight: 800; }
-
-        /* TACTICAL PROJECTS */
         .dark-section { background: #000; color: #fff; padding: 100px 0; }
         .dark-section h2 { color: #fff; margin-bottom: 10px; }
         .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
-        .mini-card { 
-            padding: 30px; 
-            border: 1px solid #333; 
-            border-radius: 8px; 
-            background: #0a0a0a; 
-            transition: border-color 0.2s;
-        }
+        .mini-card { padding: 30px; border: 1px solid #333; border-radius: 8px; background: #0a0a0a; transition: border-color 0.2s; }
         .mini-card:hover { border-color: #555; }
         .mini-card svg { width: 28px; height: 28px; margin-bottom: 20px; stroke: #666; }
         .mini-card h4 { font-size: 1.1rem; margin-bottom: 12px; color: #fff; }
         .mini-card p { color: #a0a0a0; font-size: 0.9rem; line-height: 1.5; }
-
-        .cta-btn { 
-            display: inline-block; background: #000; color: #fff; padding: 16px 30px; 
-            text-decoration: none; font-weight: 700; border-radius: 6px; margin-top: 10px;
-            text-align: center;
-        }
-        
-        .secondary-link {
-            display: block; margin-top: 20px; color: #666; font-size: 0.95rem; text-decoration: none; transition: 0.2s;
-        }
+        .cta-btn { display: inline-block; background: #000; color: #fff; padding: 16px 30px; text-decoration: none; font-weight: 700; border-radius: 6px; margin-top: 10px; text-align: center; }
+        .secondary-link { display: block; margin-top: 20px; color: #666; font-size: 0.95rem; text-decoration: none; transition: 0.2s; }
         .secondary-link:hover { color: #000; text-decoration: underline; }
-
-        @media (max-width: 900px) {
-            .hero-grid, .card-grid, .mini-grid { grid-template-columns: 1fr; flex-direction: column; }
-            .bio-area h1 { font-size: 2.8rem; }
-        }
+        @media (max-width: 900px) { .hero-grid, .card-grid, .mini-grid { grid-template-columns: 1fr; flex-direction: column; } .bio-area h1 { font-size: 2.8rem; } }
     </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="wrapper">
         <header>
             <div class="header-nav">
-                <a href="#" class="logo">FILIP DIGITAL</a>
-                <a href="https://calendly.com/kosticfilip/30min" target="_blank" class="contact-link">Get in touch</a>
+                <a href="/" class="logo">FILIP DIGITAL</a>
+                <div class="nav-right">
+                    <a href="/sr" class="lang-switch">SRB</a>
+                    <a href="https://calendly.com/kosticfilip/30min" target="_blank" class="contact-link">Get in touch</a>
+                </div>
             </div>
         </header>
 
@@ -136,7 +82,6 @@
             <div class="bio-area">
                 <h1>I build PPC systems that run for you.</h1>
                 <p>I design, implement, and manage paid advertising accounts so you can focus on your product, not campaign complexity. I build the systems and automation that clear the operational noise—allowing us to focus 100% on creative testing and rapid scaling.</p>
-                
                 <div class="value-tags">
                     <span class="tag tag-blue">#Ads Management</span>
                     <span class="tag">#Streamlined Operations</span>
@@ -145,7 +90,6 @@
                     <span class="tag">#Clear Reporting</span>
                 </div>
             </div>
-
             <div class="tool-area">
                 <h3>Core Platforms</h3>
                 <div class="platform-list">
@@ -164,89 +108,5 @@
             </div>
         </section>
     </div>
-
-    <section class="services-section">
-        <div class="wrapper">
-            <h2 style="margin-bottom: 40px;">Partnership Models</h2>
-            <div class="card-grid">
-                <div class="service-card">
-                    <h3>Full Ad Management</h3>
-                    <p>Total ownership of your paid media. I handle the heavy lifting so you can focus on your product growth and high-level strategy.</p>
-                    <ul>
-                        <li>Multi-platform execution</li>
-                        <li>Automated bid & budget pacing</li>
-                        <li>Clean, real-time reporting</li>
-                        <li>Rapid creative testing cycles</li>
-                    </ul>
-                    <a href="https://calendly.com/kosticfilip/30min" target="_blank" class="cta-btn">Discuss Management</a>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Consultancy Services</h3>
-                    <p>Strategic direction for in-house teams. I fix the infrastructure and define the roadmap for your internal specialists to execute.</p>
-                    <ul>
-                        <li>Comprehensive account audits</li>
-                        <li>Custom automation architecture</li>
-                        <li>Performance bottleneck analysis</li>
-                        <li>Bi-weekly strategy guidance</li>
-                    </ul>
-                    <a href="https://calendly.com/kosticfilip/30min" target="_blank" class="cta-btn">Discuss Consultancy</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="dark-section">
-        <div class="wrapper">
-            <h2>Tactical Performance Projects</h2>
-            <p style="color: #666; margin-bottom: 40px;">Fixed-scope solutions to stabilize and scale your infrastructure.</p>
-            
-            <div class="mini-grid">
-                <div class="mini-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                    <h4>Tracking Audit</h4>
-                    <p>Ensuring your GA4 and server-side data is accurate before you spend another dollar on traffic.</p>
-                </div>
-                <div class="mini-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <h4>Automation Build</h4>
-                    <p>Bespoke scripts and workflows to handle the repetitive tasks that eat your team's creative time.</p>
-                </div>
-                <div class="mini-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    <h4>Feed Optimization</h4>
-                    <p>Restructuring product data to maximize visibility and lower acquisition costs in Shopping feeds.</p>
-                </div>
-                <div class="mini-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8m-4-4v8"/></svg>
-                    <h4>Account Migration</h4>
-                    <p>Safe, loss-free transfer of data and historical learnings between platforms or business owners.</p>
-                </div>
-                <div class="mini-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                    <h4>Efficiency Audit</h4>
-                    <p>A surgical review to stop budget "bleeding" and identify exactly where platforms are wasting your spend.</p>
-                </div>
-                <div class="mini-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                    <h4>LP Conversion Review</h4>
-                    <p>Analyzing your landing pages to ensure the post-click experience is optimized for actual sales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" style="padding: 100px 0; text-align: center; border-top: 1px solid #eee;">
-        <div class="wrapper">
-            <h2 style="font-size: 3rem; margin-bottom: 20px;">Let’s find out how I can help.</h2>
-            <p style="font-size: 1.2rem; color: #555; margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto;">
-                No commitment, no sales pitch. Let’s just talk about your current operations and see if my approach is the right fit for your goals.
-            </p>
-            <a href="https://calendly.com/kosticfilip/30min" target="_blank" class="cta-btn">Start a no-obligation chat</a>
-            
-            <a href="https://www.linkedin.com/in/fikomedia" target="_blank" class="secondary-link">Prefer to chat first? Message me on LinkedIn.</a>
-        </div>
-    </footer>
-
-</body>
+    </body>
 </html>
