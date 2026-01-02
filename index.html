@@ -1,135 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WR2GDSQK');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip Digital | PPC Systems & Operational Freedom</title>
     <style>
+        /* [Keeping your original styles exactly as they were] */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; background: #ffffff; }
         .wrapper { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
         h1, h2, h3, h4 { font-weight: 700; color: #000; letter-spacing: -0.02em; line-height: 1.1; }
-        
         header { padding: 30px 0; }
         .header-nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 800; color: #000; text-decoration: none; font-size: 1.2rem; }
-        
-        /* Language Switcher */
         .nav-right { display: flex; align-items: center; gap: 20px; }
         .lang-switch { text-decoration: none; color: #666; font-weight: 600; font-size: 0.9rem; }
         .lang-switch:hover { color: #000; }
-
-        .contact-link { 
-            color: #000; text-decoration: none; font-weight: 600;
-            border: 2px solid #000; padding: 10px 22px; border-radius: 6px; transition: 0.2s;
-        }
+        .contact-link { color: #000; text-decoration: none; font-weight: 600; border: 2px solid #000; padding: 10px 22px; border-radius: 6px; transition: 0.2s; }
         .contact-link:hover { background: #000; color: white; }
-
-        /* HERO SECTION */
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr; 
-            gap: 60px;
-            padding: 60px 0 80px;
-            align-items: start;
-        }
-
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; padding: 60px 0 80px; align-items: start; }
         .bio-area h1 { font-size: 3.8rem; margin-bottom: 20px; }
         .bio-area p { font-size: 1.2rem; margin-bottom: 30px; color: #333; max-width: 620px; }
-
-        /* TAGS */
         .value-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-        .tag {
-            background: #f4f4f4;
-            color: #000;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid #e0e0e0;
-        }
+        .tag { background: #f4f4f4; color: #000; padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; border: 1px solid #e0e0e0; }
         .tag-blue { background: #e8f2ff; border-color: #c2d9ff; color: #0056b3; }
-
-        /* TOOLBOX */
         .tool-area { background: #fafafa; padding: 35px; border-radius: 12px; border: 1px solid #eaeaea; }
         .tool-area h3 { font-size: 0.8rem; text-transform: uppercase; color: #999; margin-bottom: 20px; letter-spacing: 0.1em; }
-
         .platform-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 25px; }
-        .brand-badge {
-            display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 6px; 
-            font-weight: 700; font-size: 0.85rem; color: #fff; text-decoration: none;
-        }
+        .brand-badge { display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 6px; font-weight: 700; font-size: 0.85rem; color: #fff; text-decoration: none; }
         .google { background: #4285F4; }
         .fb { background: #1877F2; }
         .ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
         .li { background: #0077B5; }
-
         .mastery-list { list-style: none; border-top: 1px solid #eee; padding-top: 20px; }
         .mastery-list li { font-size: 0.9rem; margin-bottom: 8px; display: flex; justify-content: space-between; color: #555; }
         .mastery-list li span { font-weight: 700; color: #000; text-align: right; }
-
-        /* PARTNERSHIP MODELS */
         .services-section { background: #fcfcfc; border-top: 1px solid #eee; padding: 80px 0; }
         .card-grid { display: flex; gap: 40px; align-items: stretch; }
-        .service-card { 
-            flex: 1; 
-            background: #fff; 
-            padding: 45px; 
-            border: 1px solid #e0e0e0; 
-            border-radius: 12px; 
-            display: flex; 
-            flex-direction: column;
-            transition: 0.3s; 
-        }
+        .service-card { flex: 1; background: #fff; padding: 45px; border: 1px solid #e0e0e0; border-radius: 12px; display: flex; flex-direction: column; transition: 0.3s; }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
         .service-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
         .service-card p { flex-grow: 1; margin-bottom: 20px; }
         .service-card ul { list-style: none; margin-bottom: 30px; }
         .service-card li { margin-bottom: 10px; padding-left: 20px; position: relative; font-size: 0.95rem; }
         .service-card li::before { content: "→"; position: absolute; left: 0; font-weight: 800; }
-
-        /* TACTICAL PROJECTS */
         .dark-section { background: #000; color: #fff; padding: 100px 0; }
         .dark-section h2 { color: #fff; margin-bottom: 10px; }
         .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
-        .mini-card { 
-            padding: 30px; 
-            border: 1px solid #333; 
-            border-radius: 8px; 
-            background: #0a0a0a; 
-            transition: border-color 0.2s;
-        }
+        .mini-card { padding: 30px; border: 1px solid #333; border-radius: 8px; background: #0a0a0a; transition: border-color 0.2s; }
         .mini-card:hover { border-color: #555; }
         .mini-card svg { width: 28px; height: 28px; margin-bottom: 20px; stroke: #666; }
         .mini-card h4 { font-size: 1.1rem; margin-bottom: 12px; color: #fff; }
         .mini-card p { color: #a0a0a0; font-size: 0.9rem; line-height: 1.5; }
-
-        .cta-btn { 
-            display: inline-block; background: #000; color: #fff; padding: 16px 30px; 
-            text-decoration: none; font-weight: 700; border-radius: 6px; margin-top: 10px;
-            text-align: center;
-        }
-        
-        .secondary-link {
-            display: block; margin-top: 20px; color: #666; font-size: 0.95rem; text-decoration: none; transition: 0.2s;
-        }
+        .cta-btn { display: inline-block; background: #000; color: #fff; padding: 16px 30px; text-decoration: none; font-weight: 700; border-radius: 6px; margin-top: 10px; text-align: center; }
+        .secondary-link { display: block; margin-top: 20px; color: #666; font-size: 0.95rem; text-decoration: none; transition: 0.2s; }
         .secondary-link:hover { color: #000; text-decoration: underline; }
-
-        @media (max-width: 900px) {
-            .hero-grid, .card-grid, .mini-grid { grid-template-columns: 1fr; flex-direction: column; }
-            .bio-area h1 { font-size: 2.8rem; }
-        }
+        @media (max-width: 900px) { .hero-grid, .card-grid, .mini-grid { grid-template-columns: 1fr; flex-direction: column; } .bio-area h1 { font-size: 2.8rem; } }
     </style>
 </head>
 <body>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR2GDSQK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrapper">
         <header>
             <div class="header-nav">
@@ -145,7 +81,6 @@
             <div class="bio-area">
                 <h1>I build PPC systems that run for you.</h1>
                 <p>I design, implement, and manage paid advertising accounts so you can focus on your product, not campaign complexity. I build the systems and automation that clear the operational noise—allowing us to focus 100% on creative testing and rapid scaling.</p>
-                
                 <div class="value-tags">
                     <span class="tag tag-blue">#Ads Management</span>
                     <span class="tag">#Streamlined Operations</span>
@@ -189,7 +124,6 @@
                     </ul>
                     <a href="https://calendly.com/kosticfilip/30min" target="_blank" class="cta-btn">Discuss Management</a>
                 </div>
-                
                 <div class="service-card">
                     <h3>Consultancy Services</h3>
                     <p>Strategic direction for in-house teams. I fix the infrastructure and define the roadmap for your internal specialists to execute.</p>
@@ -209,7 +143,6 @@
         <div class="wrapper">
             <h2>Tactical Performance Projects</h2>
             <p style="color: #666; margin-bottom: 40px;">Fixed-scope solutions to stabilize and scale your infrastructure.</p>
-            
             <div class="mini-grid">
                 <div class="mini-card">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
@@ -252,10 +185,8 @@
                 No commitment, no sales pitch. Let’s just talk about your current operations and see if my approach is the right fit for your goals.
             </p>
             <a href="https://calendly.com/kosticfilip/30min" target="_blank" class="cta-btn">Start a no-obligation chat</a>
-            
             <a href="https://www.linkedin.com/in/fikomedia" target="_blank" class="secondary-link">Prefer to chat first? Message me on LinkedIn.</a>
         </div>
     </footer>
-
 </body>
 </html>
